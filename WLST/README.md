@@ -2,13 +2,13 @@
 Insieme di tutti gli script WLST sviluppati. 
 
 Indice:
-*  [Stop e start Clusters weblogic](#start&stopClusters)
+*  [Stop e start Clusters weblogic](#Start-e-stop-Clusters)
 
 
 
 
 
-### Start e stop Clusters #start&stopClusters
+### Start e stop Clusters
 Script che stoppa e ristarta tutti i server dei cluster configurati.
 
 Variabili interne allo script:
