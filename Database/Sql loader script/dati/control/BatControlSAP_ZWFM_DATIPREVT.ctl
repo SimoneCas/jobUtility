@@ -1,0 +1,9 @@
+OPTIONS(skip=1)
+load data APPEND
+ into table	 SAP_ZWFM_DATIPREVT
+ fields terminated by ";"
+ TRAILING NULLCOLS
+ ( AVVISO,
+DATA_INVIO_PREVENTIVO,
+CONTO_CONTRATTUALE
+   )

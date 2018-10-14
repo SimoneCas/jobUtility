@@ -1,0 +1,13 @@
+OPTIONS(skip=1)
+load data
+ into table SAP_AUFK
+ fields terminated by ";"
+ TRAILING NULLCOLS
+ ( ID_ORDINE,
+   TIPO_ORDINE,
+   CATEGORIA_ORDINE,
+   DATA_ACQUSIZIONE,
+   DATA_MODIFICA,
+   SOCIETA,
+   IMPIANTO
+   )

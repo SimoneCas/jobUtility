@@ -1,0 +1,11 @@
+OPTIONS(skip=1)
+load data APPEND
+ into table SAP_ZWFM_TIMESTAMPS_POST
+ fields terminated by ";"
+ TRAILING NULLCOLS
+ ( ORDINE,
+OPERAZIONE,
+DT_POST,
+ORA_POST,
+CHIAVE_CONTROLLO
+   )
