@@ -1,0 +1,13 @@
+OPTIONS(skip=1)
+load data APPEND
+ into table SAP_IW47
+ fields terminated by ";"
+ TRAILING NULLCOLS
+ ( RIGA_SELEZIONATA,
+CONFERMA,
+CONTATORE,
+CREATO_IL,
+CREATO_DA,
+ORDINE,
+CAUSA_SCOSTAMENTO
+   )
