@@ -3,9 +3,8 @@ Insieme di tutti gli script WLST sviluppati.
 
 Indice:
 *  [Stop e start Clusters weblogic](#start-e-stop-clusters)
+*  [Configurazione dominio Weblogic](#configurazione-dominio-weblogic)
 *  [Abilitazione/Disabilitazione dei Proxy Service di OSB](#abilita-disabilita-proxy-service)
-
-
 
 
 
@@ -27,6 +26,24 @@ L'ordine di start dei cluster è dal primo elemento dell'array all'ultimo
 Run: 
 ```
 MIDDLEWARE_HOME/oracle_common/common/bin/wlst Stop&StartClusters.py
+```
+### Configurazione domino Weblogic
+Script idempotente e parametrico che configura le seguenti risorse Weblogic:
+* Managed Servers
+* Cluster Weblogic
+* Work Manager
+* Singleton Cluster
+* Cluster Coherence
+* Parametri di avvio di managed servers
+* Server JMS, Moduli JMS, Code JMS
+* Datasource JDBC
+* Override file di configurazione di Coherence
+
+Tutte le parametrizzazioni sono configurate nei file settings_application_SYSINT.py, settingsEnvironment.py e settingsResources.py
+
+Run: 
+```
+MIDDLEWARE_HOME/oracle_common/common/bin/wlst 4-configureCacheResources.py
 ```
 
 ### Abilita-Disabilita Proxy Service
@@ -51,4 +68,4 @@ Formato file con la lista di proxy services:
 # RECEIVER REMEDY
 Contact/receiver/remedy/nttm/wideesbContactNTTM_RTTRemedyTxManagerPrx
 Contact/receiver/remedy/ottm/wideesbContactOTTM_RTTRemedyTxManagerPrx
-```
+```	
