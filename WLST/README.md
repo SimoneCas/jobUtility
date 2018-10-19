@@ -4,6 +4,7 @@ Insieme di tutti gli script WLST sviluppati.
 Indice:
 *  [Stop e start Clusters weblogic](#start-e-stop-clusters)
 *  [Configurazione dominio Weblogic](#configurazione-dominio-weblogic)
+*  [Deploy applicazioni](#deploy-applicazioni)
 *  [Abilitazione/Disabilitazione dei Proxy Service di OSB](#abilita-disabilita-proxy-service)
 
 
@@ -44,6 +45,19 @@ Tutte le parametrizzazioni sono configurate nei file settings_application_SYSINT
 Run: 
 ```
 MIDDLEWARE_HOME/oracle_common/common/bin/wlst 4-configureCacheResources.py
+```
+
+### Deploy applicazioni
+Script idempotente che installa gli eseguibili passati in input.
+
+Variabili da configurare nel file setting_SYSINT:
+* appName: nome applicazione
+* path: percorso fisico di dove risiede il file da installare
+* cluster: cluster sul quale installare il pacchetto
+
+Run: 
+```
+MIDDLEWARE_HOME/oracle_common/common/bin/wlst deployApps.py settings_SYSINT
 ```
 
 ### Abilita-Disabilita Proxy Service
