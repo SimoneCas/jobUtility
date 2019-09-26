@@ -7,3 +7,4 @@ Indice:
 * model-generator-from-xsd: Utilizzo del plugin "jaxb2-maven-plugin" per auto-generare classi del modello a partire da uno schema xsd.
 * circuit-breaker: Implementazione del pattern Circuit Breaker, utilizzato per wrapper una chiamata remota e, al verificarsi di un numero di errori configurati per unità di tempo, impedire momentaneamente la chiamata esterna ritornando un errore o un valore di default, diminuendo così il numero di thread in attesa di risposte dal sistema esterno.
 * rest-client-pool: Generazione di un pool configurabile di Client REST, al fine di ottimizzare le performance in fase di invocazione, evitando così la generazione di nuove istanze ad ogni chiamata.
+* file-reader: Classi di utilities per la lettura di file esterni all'applicazione.
