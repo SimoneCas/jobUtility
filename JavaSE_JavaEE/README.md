@@ -8,3 +8,4 @@ Indice:
 * circuit-breaker: Implementazione del pattern Circuit Breaker, utilizzato per wrapper una chiamata remota e, al verificarsi di un numero di errori configurati per unità di tempo, impedire momentaneamente la chiamata esterna ritornando un errore o un valore di default, diminuendo così il numero di thread in attesa di risposte dal sistema esterno.
 * rest-client-pool: Generazione di un pool configurabile di Client REST, al fine di ottimizzare le performance in fase di invocazione, evitando così la generazione di nuove istanze ad ogni chiamata.
 * file-reader: Classi di utilities per la lettura di file esterni all'applicazione.
+* task-executor-with-blocking-queue: Utilizzata la struttura dati BlockingQueue per eseguire task concorrenti in modo orrdinato rispetto al loro inserimento e partizionati per il valore della chiave. Possibile spunto per implementazioni simili
