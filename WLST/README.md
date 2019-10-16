@@ -2,12 +2,39 @@
 Insieme di tutti gli script WLST sviluppati. 
 
 Indice:
+Libreria unificata che permette sia operazioni di configurazione che di operatività. Customizzabile andando a modificare semplici file di configurazione:
+*  [Script WLST tramite lib condivisa](#Script-WLST-tramite-lib-condivisa)
+
+Il resto degli script invece fornisce singole funzionalità:
 *  [Stop e start Clusters weblogic](#start-e-stop-clusters)
 *  [Configurazione dominio Weblogic](#configurazione-dominio-weblogic)
 *  [Deploy applicazioni](#deploy-applicazioni)
 *  [Abilitazione/Disabilitazione dei Proxy Service di OSB](#abilita-disabilita-proxy-service)
 
 
+### Script WLST tramite lib condivisa
+Libreria unificata che permette sia operazioni di configurazione che di operatività. Customizzabile andando a modificare semplici file di configurazione.
+Posizionare su filesystemm nella stessa directory sia i file di configurazione .py che la cartella lib che contiene le tre liberrie:
+```
+main_dir
+    |
+    |__ configure.py
+    |__ deploy.py
+    |__ reboot.py
+    |__ startup.py
+    |__ shutdown.py
+    |______ lib
+             |
+             |__ domain_lib.py
+             |__ executor.py
+             |__ jms_lib.py
+```
+
+Esempio lancio dello script:
+
+```
+MIDDLEWARE_HOME/oracle_common/common/bin/wlst configure.py
+```
 
 ### Start e stop Clusters
 Script che stoppa e ristarta tutti i server dei cluster configurati.
