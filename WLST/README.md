@@ -14,6 +14,9 @@ Il resto degli script invece fornisce singole funzionalità:
 
 ### Script WLST tramite lib condivisa
 Libreria unificata che permette sia operazioni di configurazione che di operatività. Customizzabile andando a modificare semplici file di configurazione.
+
+La feature principale di questa libreria è che gestisce le configuraizoni in modo idempotente; se la risorsa non esiste la crea, se invece esiste non va in errore e setta le configurazioni presenti nel file di configurazione.
+
 Posizionare su filesystemm nella stessa directory sia i file di configurazione .py che la cartella lib che contiene le tre liberrie:
 ```
 main_dir
