@@ -7,3 +7,4 @@ Indice:
 * normalizePipeCsv: jar utile per la modifica di file di testo ricevuti in input;
 * Coherence: esempi di funzionalità di Oracle Coherence;
 * Java: esempi di utilità legati a Java SE e Java EE.
+* BashScript: script per shell linux e windows utili per operazioni ricorrenti
