@@ -9,3 +9,4 @@ Indice:
 * rest-client-pool: Generazione di un pool configurabile di Client REST, al fine di ottimizzare le performance in fase di invocazione, evitando così la generazione di nuove istanze ad ogni chiamata.
 * file-reader: Classi di utilities per la lettura di file esterni all'applicazione.
 * task-executor-with-blocking-queue: Utilizzata la struttura dati BlockingQueue per eseguire task concorrenti in modo orrdinato rispetto al loro inserimento e partizionati per il valore della chiave. Possibile spunto per implementazioni simili
+* enum-generator: Builder parametrico per la generazione di Enum values.
