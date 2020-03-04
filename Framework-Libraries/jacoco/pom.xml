@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.sample.java</groupId>
+	<artifactId>jacoco</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>JaCoCo Sample</name>
+
+	<packaging>jar</packaging>
+	
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.debug>true</maven.compiler.debug>
+		<jacoco-maven-plugin.version>0.8.3</jacoco-maven-plugin.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		    <scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco-maven-plugin.version}</version>
+				  <executions>
+					<execution>
+					  <goals>
+						<goal>prepare-agent</goal>
+					  </goals>
+					</execution>
+					<execution>
+					  <id>report</id>
+					  <phase>prepare-package</phase>
+					  <goals>
+						<goal>report</goal>
+					  </goals>
+					</execution>
+				  </executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
