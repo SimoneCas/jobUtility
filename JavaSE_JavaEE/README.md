@@ -10,3 +10,4 @@ Indice:
 * file-reader: Classi di utilities per la lettura di file esterni all'applicazione.
 * task-executor-with-blocking-queue: Utilizzata la struttura dati BlockingQueue per eseguire task concorrenti in modo orrdinato rispetto al loro inserimento e partizionati per il valore della chiave. Possibile spunto per implementazioni simili
 * enum-generator: Builder parametrico per la generazione di Enum values.
+* optional: Container Object che potrebbe contenere un Value o null.
