@@ -15,10 +15,10 @@ public class Calculator {
 	}
 	
 	public double div(int a, int b) {
-		if (b == 0) {
-			return 0;
-		} else {
+		//if (b == 0) {
+			//return 0;
+		//} else {
 			return a/b;
-		}
+	//	}
 	}
 }
