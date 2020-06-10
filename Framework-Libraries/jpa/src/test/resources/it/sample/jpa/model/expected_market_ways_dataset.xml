@@ -1,0 +1,13 @@
+<dataset>
+	<MARKETS_WAYS WAY_ID="3" 
+	              BRAND_ID="175"
+	              CHANNEL_ID="**NULL**"
+	              MATCH_ID="1" 
+	              MARKET_ID="11"
+	              INSERT_DATE="2009-02-14 00:31:30.123" 
+	              ODDS="12.3" 
+	              WIN="WIN" 
+	              TIMESTAMP="1234567890" 
+	              STATUS="OPEN" 
+	              STATUS_OLD="OPEN" />
+</dataset>

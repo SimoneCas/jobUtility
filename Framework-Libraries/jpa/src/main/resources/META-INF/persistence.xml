@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    
+    
+    <persistence-unit name="JpaSamplePersistence" >
+    	
+	    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+	    
+	    <mapping-file>META-INF/orm-sample.xml</mapping-file>   
+	    
+	    <non-jta-data-source>jdbc/datasourceName</non-jta-data-source>
+	    
+	    <shared-cache-mode>NONE</shared-cache-mode>
+	    
+	    <properties>
+	    	<!-- log properties -->
+			<!-- <property name="eclipselink.logging.level" value="FINEST" /> -->
+			
+			<!-- senza ulteriori property il comportamento è il seguente
+				 una remove rimuove anche la riga dal db
+				 al riavvio la cache viene caricata con le info persistite in precedenza sul db -->
+			
+			<!-- decommentare per fare in modo che JPA crei le tabelle -->
+			<!-- decommentando questa property una put dopo il riavvio causa la perdita di tutte le info già presenti in tabella -->
+	        <!-- ddl generation only for development -->
+	        <!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> -->
+	        
+	        <!-- decommentando queste property un riavvio del server comporta la cancellazione del contenuto delle tabelle del db -->
+			<!-- <property name="eclipselink.create-ddl-jdbc-file-name" value="createDDL_ddlGeneration.jdbc"/>
+			<property name="eclipselink.drop-ddl-jdbc-file-name" value="dropDDL_ddlGeneration.jdbc"/>
+			<property name="eclipselink.ddl-generation.output-mode" value="both"/> -->
+	    </properties>
+	    
+	</persistence-unit>
+
+</persistence>

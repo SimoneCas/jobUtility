@@ -1,0 +1,14 @@
+<dataset>
+	<MARKETS BRAND_ID="175"
+	         CHANNEL_ID="**NULL**"
+	         MATCH_ID="1" 
+	         MARKET_ID="11"
+	         EXTERNAL_SYSTEM_STATUS="SENT" 
+	         INSERT_DATE="2009-02-14 00:31:30.123" 
+	         NAME="1-X-2" 
+	         TIMESTAMP="1234567890" 
+	         TRANSACTION_ID="abcdef" 
+	         STATUS="OPEN" 
+	         STATUS_OLD="OPEN" 
+	         PROVIDER_ID="2" />
+</dataset>

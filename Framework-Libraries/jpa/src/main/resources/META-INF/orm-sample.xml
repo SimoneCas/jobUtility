@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+	version="2.1">
+
+	<description>JPA Sample Entities</description>
+
+	<package>entity</package>
+	
+	<entity class="it.sample.jpa.model.Market"
+	        name="Markets">
+		<table name="markets"/>
+		<named-query name="allMarketIds">
+			<query>select market.marketId from Markets market</query>
+		</named-query>
+		<attributes>
+			<embedded-id name="marketId"/>
+			<basic name="name">
+				<column name="name"/>
+			</basic>
+			<element-collection name="ways" fetch="EAGER">
+				<collection-table/>
+			</element-collection>
+			<basic name="insertDate">
+				<column name="insert_date"/>
+			</basic>
+			<basic name="externalSystemStatus">
+				<column name="external_system_status"/>
+				<enumerated>STRING</enumerated>
+			</basic>
+			<basic name="timestamp">
+				<column name="timestamp"/>
+			</basic>
+			<basic name="transactionId">
+				<column name="transaction_id"/>
+			</basic>
+			<basic name="status">
+				<column name="status"/>
+				<enumerated>STRING</enumerated>
+			</basic>
+			<basic name="statusOld">
+				<column name="status_old"/>
+				<enumerated>STRING</enumerated>
+			</basic>
+			<basic name="providerId">
+				<column name="provider_id"/>
+			</basic>
+		</attributes>
+	</entity>
+	
+	<embeddable class="it.sample.jpa.model.MatchId">
+		<attributes>
+			<basic name="brandId">
+				<column name="brand_id"/>
+			</basic>
+			<basic name="channelId">
+				<column name="channel_id"/>
+				<convert>nullStringConverter</convert>
+				<converter name="nullStringConverter" class="it.sample.jpa.NullStringConverter" />
+			</basic>
+			<basic name="matchId">
+				<column name="match_id"/>
+			</basic>
+		</attributes>
+	</embeddable>
+	
+	<embeddable class="it.sample.jpa.model.MarketId">
+		<attributes>
+			<basic name="brandId">
+				<column name="brand_id"/>
+			</basic>
+			<basic name="channelId">
+				<column name="channel_id"/>
+				<convert>nullStringConverter</convert>
+				<converter name="nullStringConverter" class="it.sample.jpa.NullStringConverter" />
+			</basic>
+			<basic name="matchId">
+				<column name="match_id"/>
+			</basic>
+			<basic name="marketId">
+				<column name="market_id"/>
+			</basic>
+		</attributes>
+	</embeddable>
+	
+	<embeddable class="it.sample.jpa.model.Way">
+		<attributes>
+			<basic name="wayId">
+				<column name="way_id"/>
+			</basic>
+			<basic name="win">
+				<column name="win"/>
+			</basic>
+			<basic name="odds">
+				<column name="odds"/>
+			</basic>
+			<basic name="insertDate">
+				<column name="insert_date"/>
+			</basic>
+			<basic name="timestamp">
+				<column name="timestamp"/>
+			</basic>
+			<basic name="status">	
+				<column name="status"/>
+				<enumerated>STRING</enumerated>
+			</basic>
+			<basic name="statusOld">	
+				<column name="status_old"/>
+				<enumerated>STRING</enumerated>
+			</basic>
+		</attributes>
+	</embeddable>
+	
+</entity-mappings>
